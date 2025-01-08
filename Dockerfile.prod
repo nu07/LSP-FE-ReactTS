@@ -1,0 +1,42 @@
+FROM node:18.12.1-alpine AS builder
+ENV TZ=Asia/Jakarta
+WORKDIR /opt/web
+COPY package.json ./
+COPY . .
+
+RUN apk update \
+    && apk upgrade --no-cache \
+    && apk add --no-cache bash git \
+    && rm -rf /var/cache/apk/*
+
+# Install pnpm globally
+RUN npm install -g pnpm
+
+# Set pnpm store directory to ensure consistency
+RUN pnpm config set store-dir /root/.local/share/pnpm/store
+
+# Clean the pnpm store and node_modules
+RUN pnpm store prune
+RUN rm -rf node_modules
+
+# Install dependencies using pnpm
+RUN pnpm install
+
+# Install TypeScript, tsc, and ts-node using pnpm
+RUN pnpm add typescript ts-node --save-dev
+
+# Verify TypeScript installation and version
+RUN pnpm exec tsc --version
+
+# Build the project
+RUN pnpm build
+
+FROM nginx:1.17-alpine
+RUN apk --no-cache add curl \
+    && curl -L https://github.com/a8m/envsubst/releases/download/v1.4.2/envsubst-`uname -s`-`uname -m` -o envsubst && \
+    chmod +x envsubst && \
+    mv envsubst /usr/local/bin
+
+COPY ./nginx.config /etc/nginx/nginx.template
+CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/nginx.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
+COPY --from=builder /opt/web/dist /usr/share/nginx/html
