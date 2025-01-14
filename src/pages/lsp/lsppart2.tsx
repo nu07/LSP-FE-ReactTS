@@ -1,12 +1,11 @@
-import Navbar from "@/components/navbar/navbarLSP";
-import { useState } from "react";
-
 type Input = {
   value: string;
 };
 
 function LspPart2() {
   const [inputs, setInputs] = useState<Input[]>([{ value: "" }]);
+  const [searchValue, setSearchValue] = useState<string>("");
+  const [searchResult, setSearchResult] = useState<string>("");
 
   const handleChange = (
     index: number,
@@ -29,20 +28,38 @@ function LspPart2() {
     }
   };
 
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(event.target.value);
+  };
+
+  useEffect(() => {
+    const found = inputs.find((input) => input.value === searchValue);
+    setSearchResult(
+      found ? `Angka ${searchValue} ditemukan` : "Angka tidak ditemukan"
+    );
+  }, [searchValue, inputs]);
+
+
   const sortedInputs = [...inputs].sort(
-    (a, b) => a.value.localeCompare(b.value) // Compare strings lexicographically
+    (a, b) => parseFloat(a.value) - parseFloat(b.value)
   );
 
   console.log(inputs);
 
   return (
     <>
-      <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        {/* Dynamically Render Inputs */}
-        yang sudah di sort :
+        <label>Cari Data</label>
+        <input
+          type="number"
+          value={searchValue}
+          onChange={handleSearchChange}
+          className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-700 rounded-md py-2"
+        />
+        <div className="border-b-2 my-4" />
+        <div>{searchResult}</div>
+        <div>yang sudah di sort :</div>
         <div>
-          {/* Map through sorted inputs and display each value as text */}
           {sortedInputs.map((input, index) => (
             <p key={index}>{input.value}</p>
           ))}
@@ -67,7 +84,6 @@ function LspPart2() {
             )}
           </div>
         ))}
-        {/* Button to Add New Input */}
         <div className="mt-2">
           <button
             type="button"
