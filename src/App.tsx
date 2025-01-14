@@ -15,7 +15,14 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/lsp2" element={<LspPart2 />} />
+        <Route
+          path="/lsp2"
+          element={
+            <DefaultTemplate>
+              <LspPart2 />
+            </DefaultTemplate>
+          }
+        />
         {/* <Route
           path="/login"
           element={isLogin ? <Navigate to="/" /> : <Login />}

@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
@@ -116,12 +117,12 @@ function NavbarHome() {
                 )}
               </Popover>
 
-              <a
-                href="#"
+              <Link
+                to="/lsp2"
                 className="text-base font-medium text-gray-500 hover:text-gray-900"
               >
-                Pricing
-              </a>
+                LSP part 2
+              </Link>
               <a
                 href="#"
                 className="text-base font-medium text-gray-500 hover:text-gray-900"
@@ -202,12 +203,12 @@ function NavbarHome() {
                 </div>
                 <div className="py-6 px-5">
                   <div className="grid grid-cols-2 gap-4">
-                    <a
-                      href="#"
+                    <Link
+                      to="/lsp2"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
-                      Pricing
-                    </a>
+                      LSP part 2
+                    </Link>
                     <a
                       href="#"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
