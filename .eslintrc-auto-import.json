@@ -46,6 +46,12 @@
     "PencilAltIcon": true,
     "ReplyIcon": true,
     "TrashIcon": true,
-    "UsersIcon": true
+    "UsersIcon": true,
+    "UserGroupIcon": true,
+    "CashIcon": true,
+    "ChartBarIcon": true,
+    "CalculatorIcon": true,
+    "CreditCardIcon": true,
+    "ExclamationIcon": true
   }
 }
