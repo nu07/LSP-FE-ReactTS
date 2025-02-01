@@ -7,29 +7,46 @@ function classNames(...classes: any[]) {
 
 const solutions = [
   {
-    name: "Inbox",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
-    href: "#",
-    icon: InboxIcon,
+    name: "Pelanggan",
+    description: "Pembayaran Pelanggan",
+    href: "/pelanggan",
+    icon: UsersIcon,
   },
   {
-    name: "Messaging",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
-    icon: AnnotationIcon,
+    name: "Level",
+    description: "Role Level User",
+    href: "/level",
+    icon: UserGroupIcon,
   },
   {
-    name: "Live Chat",
-    description: "Your customers' data will be safe and secure.",
-    href: "#",
-    icon: ChatAlt2Icon,
+    name: "Tarif",
+    description: "Tarif Pembayaran",
+    href: "/tarif",
+    icon: CashIcon,
   },
   {
-    name: "Knowledge Base",
-    description: "Connect with third-party tools that you're already using.",
-    href: "#",
-    icon: QuestionMarkCircleIcon,
+    name: "User",
+    description: "User Data",
+    href: "/user",
+    icon: UsersIcon,
+  },
+  {
+    name: "Penggunaan",
+    description: "Data Penggunaan",
+    href: "/penggunaan",
+    icon: ChartBarIcon,
+  },
+  {
+    name: "Tagihan",
+    description: "Data Tagihan",
+    href: "/tagihan",
+    icon: CalculatorIcon,
+  },
+  {
+    name: "Pembayaran",
+    description: "Data Pembayaran",
+    href: "/pembayaran",
+    icon: CreditCardIcon,
   },
 ];
 
@@ -44,11 +61,18 @@ function NavbarHome() {
                 <span className="sr-only">Workflow</span>
                 <img
                   className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
+                  src="/images/logo.png"
                   alt=""
                 />
               </a>
             </div>
+            <Link
+              to="/"
+              className="text-base font-medium text-gray-500 hover:text-gray-900"
+            >
+              Home
+            </Link>
+
             <div className="-mr-2 -my-2 md:hidden">
               <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                 <span className="sr-only">Open menu</span>
@@ -88,9 +112,9 @@ function NavbarHome() {
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                             {solutions.map((item) => (
-                              <a
+                              <Link
                                 key={item.name}
-                                href={item.href}
+                                to={item.href}
                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                               >
                                 <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
@@ -107,7 +131,7 @@ function NavbarHome() {
                                     {item.description}
                                   </p>
                                 </div>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -123,20 +147,8 @@ function NavbarHome() {
               >
                 LSP part 2
               </Link>
-              <a
-                href="#"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
-              >
-                Partners
-              </a>
-              <a
-                href="#"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
-              >
-                Company
-              </a>
             </Popover.Group>
-            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            {/* <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <a
                 href="#"
                 className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
@@ -149,7 +161,7 @@ function NavbarHome() {
               >
                 Sign up
               </a>
-            </div>
+            </div> */}
           </div>
 
           <Transition
@@ -171,7 +183,7 @@ function NavbarHome() {
                     <div>
                       <img
                         className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
+                        src="/images/logo.png"
                         alt="Workflow"
                       />
                     </div>
@@ -185,9 +197,9 @@ function NavbarHome() {
                   <div className="mt-6">
                     <nav className="grid grid-cols-1 gap-7">
                       {solutions.map((item) => (
-                        <a
+                        <Link
                           key={item.name}
-                          href={item.href}
+                          to={item.href}
                           className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                         >
                           <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
@@ -196,7 +208,7 @@ function NavbarHome() {
                           <div className="ml-4 text-base font-medium text-gray-900">
                             {item.name}
                           </div>
-                        </a>
+                        </Link>
                       ))}
                     </nav>
                   </div>
@@ -209,18 +221,6 @@ function NavbarHome() {
                     >
                       LSP part 2
                     </Link>
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      Partners
-                    </a>
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      Company
-                    </a>
                   </div>
                   <div className="mt-6">
                     <a
