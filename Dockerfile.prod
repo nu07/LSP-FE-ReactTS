@@ -16,7 +16,7 @@ RUN npm install -g pnpm
 RUN pnpm config set store-dir /root/.local/share/pnpm/store
 
 # Clean the pnpm store and node_modules
-RUN pnpm store prune
+# RUN pnpm store prune
 RUN rm -rf node_modules
 
 # Install dependencies using pnpm

@@ -5,7 +5,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    container_name: template-react-ts
+    container_name: react-lsp-bsi
     restart: unless-stopped
-    ports: 
-        - "1414:80"
+    ports:
+      - "1430:80"
+    networks:
+      - website-discord-kelbuk_default
+
+networks:
+  website-discord-kelbuk_default:
+    external: true
