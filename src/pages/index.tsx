@@ -89,7 +89,7 @@ function index() {
             <div className="absolute inset-0">
               <img
                 className="h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
+                src="https://images.unsplash.com/photo-1737920406899-e1cabc43a6a7?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="People working on laptops"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply" />
@@ -135,35 +135,35 @@ function index() {
             <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
               <img
                 className="h-12"
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
+                src="https://plus.unsplash.com/premium_photo-1700346339061-9755dcc26bd9?q=80&w=430&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Tuple"
               />
             </div>
             <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
               <img
                 className="h-12"
-                src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
+                src="https://images.unsplash.com/photo-1736635929162-afc982d54a32?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Mirage"
               />
             </div>
             <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
               <img
                 className="h-12"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
+                src="https://images.unsplash.com/photo-1736635929162-afc982d54a32?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="StaticKit"
               />
             </div>
             <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
               <img
                 className="h-12"
-                src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
+                src="https://images.unsplash.com/photo-1736635929162-afc982d54a32?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Transistor"
               />
             </div>
             <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
               <img
                 className="h-12"
-                src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
+                src="https://images.unsplash.com/photo-1736635929162-afc982d54a32?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Workcation"
               />
             </div>
@@ -224,7 +224,7 @@ function index() {
                       <div className="flex-shrink-0">
                         <img
                           className="h-6 w-6 rounded-full"
-                          src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                          src="https://images.unsplash.com/photo-1736635929162-afc982d54a32?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                           alt=""
                         />
                       </div>
@@ -240,7 +240,7 @@ function index() {
               <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                 <img
                   className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                  src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+                  src="https://images.unsplash.com/photo-1736635929162-afc982d54a32?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Inbox user interface"
                 />
               </div>
@@ -285,7 +285,7 @@ function index() {
               <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                 <img
                   className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                  src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                  src="https://images.unsplash.com/photo-1736635929162-afc982d54a32?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Customer profile user interface"
                 />
               </div>
@@ -337,7 +337,7 @@ function index() {
             <div className="h-full xl:relative xl:col-start-2">
               <img
                 className="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
-                src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
+                src="https://images.unsplash.com/photo-1737920406899-e1cabc43a6a7?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="People working on laptops"
               />
               <div
